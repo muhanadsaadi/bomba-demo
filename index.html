@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!-- CONCEPT DEMO by Barza | برزة — not an official Bomba Burrito menu. Engine: barza-menu (shared CSS/JS). -->
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Bomba Burrito | Concept Demo</title>
+  <meta name="description" content="Concept demo by Barza: bilingual QR menu with WhatsApp ordering — not an official menu">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#E2231A">
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://muhanadsaadi.github.io/barza-menu/css/style.css">
+  <style>.demo-banner{background:#E2231A;color:#fff;font-weight:700;border:0}</style>
+</head>
+<body>
+  <a class="skip-link" href="#menu" data-i18n="skip">تخطَّ إلى القائمة</a>
+  <div class="demo-banner" id="demoBanner" data-i18n="demo">عرض تجريبي (مفهوم) — ليست قائمة رسمية · CONCEPT DEMO — not an official menu</div>
+  <header class="site-header">
+    <div class="brand">
+      <img id="logo" class="brand-logo" src="logo.svg" alt="" width="56" height="56">
+      <div>
+        <h1 id="restaurantName">…</h1>
+        <p id="tagline" class="tagline"></p>
+        <p class="meta"><span id="openStatus" class="status-pill"></span><span id="hoursLabel"></span></p>
+      </div>
+    </div>
+    <button id="langToggle" class="lang-toggle" type="button" aria-label="Switch to English">EN</button>
+  </header>
+  <div class="toolbar" id="toolbar">
+    <label class="search">
+      <span class="visually-hidden" data-i18n="searchLabel">ابحث في القائمة</span>
+      <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M10 4a6 6 0 1 0 3.7 10.7l4.8 4.8 1.4-1.4-4.8-4.8A6 6 0 0 0 10 4zm0 2a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/></svg>
+      <input id="search" type="search" autocomplete="off" data-i18n-placeholder="searchPh">
+    </label>
+    <nav class="tabs" id="tabs" role="tablist" aria-label="Categories"></nav>
+  </div>
+  <main id="menu" class="menu" aria-live="polite"></main>
+  <p id="emptyState" class="empty" hidden data-i18n="noResults">لا توجد نتائج مطابقة</p>
+  <footer class="site-footer">
+    <p id="location"></p>
+    <p>Prices from the restaurant's Aug 2026 PDF menu · الأسعار من قائمة أغسطس ٢٠٢٦</p>
+    <p><span data-i18n="madeBy">صُنعت بواسطة</span> <a href="https://wa.me/96876632622" target="_blank" rel="noopener">برزة | Barza</a></p>
+  </footer>
+  <button id="cartBar" class="cart-bar" type="button" hidden>
+    <span class="cart-count" id="cartCount" aria-live="polite">0</span>
+    <span data-i18n="viewCart">عرض السلة</span>
+    <strong id="cartBarTotal"></strong>
+  </button>
+  <dialog id="cartDialog" class="cart-dialog" aria-labelledby="cartTitle">
+    <div class="cart-head">
+      <h2 id="cartTitle" data-i18n="cart">سلتك</h2>
+      <button type="button" class="icon-btn" id="closeCart" data-i18n-aria="close" aria-label="إغلاق">✕</button>
+    </div>
+    <ul id="cartList" class="cart-list"></ul>
+    <form id="orderForm" class="order-form">
+      <label><span data-i18n="name">الاسم (اختياري)</span><input id="custName" type="text" autocomplete="name" maxlength="60"></label>
+      <label><span data-i18n="table">رقم الطاولة / استلام</span><input id="custTable" type="text" maxlength="40" data-i18n-placeholder="tablePh"></label>
+      <label><span data-i18n="notes">ملاحظات</span><textarea id="custNotes" rows="2" maxlength="200" data-i18n-placeholder="notesPh"></textarea></label>
+      <div class="cart-total"><span data-i18n="total">المجموع</span><strong id="cartTotal"></strong></div>
+      <button type="submit" class="whatsapp-btn"><span data-i18n="orderWa">اطلب عبر واتساب</span></button>
+      <button type="button" class="link-btn" id="clearCart" data-i18n="clear">إفراغ السلة</button>
+    </form>
+  </dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="https://muhanadsaadi.github.io/barza-menu/js/app.js"></script>
+  <script>
+    // Demo-specific texts (override the shared engine's defaults)
+    Object.assign(I18N.ar, { demo: 'عرض تجريبي (مفهوم) من برزة — ليست قائمة رسمية لبومبا بوريتو، ورقم واتساب وهمي', searchPh: 'ابحث: بوريتو، تاكو…', notesPh: 'مثال: بدون بصل، حار جداً', tablePh: 'مثال: طاولة ٤ أو استلام' });
+    Object.assign(I18N.en, { demo: 'CONCEPT DEMO by Barza — not an official Bomba Burrito menu; WhatsApp number is a dummy', searchPh: 'Search: burrito, taco…', notesPh: 'e.g. no onion, extra spicy', tablePh: 'e.g. Table 4 or pickup' });
+  </script>
+</body>
+</html>

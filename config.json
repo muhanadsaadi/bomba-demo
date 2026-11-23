@@ -1,0 +1,27 @@
+{
+  "name_ar": "بومبا بوريتو",
+  "name_en": "Bomba Burrito",
+  "tagline_ar": "عرض تجريبي (مفهوم) — ليس قائمة رسمية",
+  "tagline_en": "CONCEPT DEMO — not an official menu",
+  "logo": "logo.svg",
+  "whatsapp": "96800000000",
+  "_whatsapp_note": "DEMO PLACEHOLDER NUMBER — replace with the restaurant's WhatsApp Business number before any real use",
+  "currency_ar": "ر.ع.",
+  "currency_en": "OMR",
+  "location_ar": "مزن مول، الموالح الشمالية",
+  "location_en": "Al Muzn Mall, Al Mawaleh North",
+  "hours": {
+    "open": "12:00",
+    "close": "23:00",
+    "label_ar": "أيام الأسبوع ١٢ظ – ١١م · نهاية الأسبوع حتى ١٢م",
+    "label_en": "Weekdays 12 PM – 11 PM · Weekends to 12 AM"
+  },
+  "colors": {
+    "primary": "#E2231A",
+    "accent": "#2E8B3A",
+    "background": "#FFF8F0",
+    "surface": "#FFFFFF",
+    "text": "#2A1A14"
+  },
+  "demo": true
+}
